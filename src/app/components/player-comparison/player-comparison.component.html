@@ -1,0 +1,202 @@
+<div *ngIf="player1 && player2" class="min-h-screen bg-gradient-to-b from-brazil-blue via-brazil-green to-brazil-yellow p-5">
+    <div class="container mx-auto">
+      <div class="flex justify-between items-center mb-5">
+        <h1 class="text-4xl font-game text-white text-shadow">CONFRONTO DE CRAQUES</h1>
+        <button (click)="goBack()" class="px-5 py-2 bg-red-600 text-white rounded-md hover:bg-red-700 transition">
+          Voltar
+        </button>
+      </div>
+      
+      <div class="bg-black bg-opacity-80 rounded-xl p-5 shadow-2xl">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-3">
+          <!-- Jogador 1 -->
+          <div class="text-center">
+            <div class="relative">
+              <h2 class="text-3xl font-game text-green-500">{{player1.name}}</h2>
+              <div class="flex items-center justify-center">
+                <img [src]="player1.teamLogo" class="h-7 w-7 mr-2" alt="Team logo">
+                <p class="text-white text-base">{{player1.club}}</p>
+              </div>
+              <img [src]="player1.bodyPhotoUrl" class="w-full h-64 object-contain mx-auto" alt="Player 1">
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3 mb-3">
+              <div class="bg-blue-900 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Velocidade</p>
+                <p class="text-2xl font-game">{{player1.pace}}</p>
+              </div>
+              <div class="bg-green-600 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Chute</p>
+                <p class="text-2xl font-game">{{player1.shooting}}</p>
+              </div>
+              <div class="bg-yellow-400 p-3 rounded-lg text-center text-blue-900">
+                <p class="font-bold text-sm">Passe</p>
+                <p class="text-2xl font-game">{{player1.passing}}</p>
+              </div>
+              <div class="bg-yellow-400 p-3 rounded-lg text-center text-blue-900">
+                <p class="font-bold text-sm">Drible</p>
+                <p class="text-2xl font-game">{{player1.dribbling}}</p>
+              </div>
+              <div class="bg-green-600 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Defesa</p>
+                <p class="text-2xl font-game">{{player1.defending}}</p>
+              </div>
+              <div class="bg-blue-900 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Físico</p>
+                <p class="text-2xl font-game">{{player1.physical}}</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="flex flex-col items-center justify-center">
+            <h2 class="text-5xl font-game text-yellow-400 animate-pulse mb-3">VS</h2>
+            
+            <app-radar-chart 
+              [player1]="player1"
+              [player2]="player2"
+              class="w-full h-72">
+            </app-radar-chart>
+          </div>
+          
+          <div class="text-center">
+            <div class="relative">
+              <h2 class="text-3xl font-game text-green-500">{{player2.name}}</h2>
+              <div class="flex items-center justify-center">
+                <p class="text-white text-base">{{player2.club}}</p>
+                <img [src]="player2.teamLogo" class="h-7 w-7 ml-2" alt="Team logo">
+              </div>
+              <img [src]="player2.bodyPhotoUrl" class="w-full h-64 object-contain mx-auto" alt="Player 2">
+            </div>
+            
+            <div class="grid grid-cols-2 gap-3 mb-3">
+              <div class="bg-blue-900 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Velocidade</p>
+                <p class="text-2xl font-game">{{player2.pace}}</p>
+              </div>
+              <div class="bg-green-600 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Chute</p>
+                <p class="text-2xl font-game">{{player2.shooting}}</p>
+              </div>
+              <div class="bg-yellow-400 p-3 rounded-lg text-center text-blue-900">
+                <p class="font-bold text-sm">Passe</p>
+                <p class="text-2xl font-game">{{player2.passing}}</p>
+              </div>
+              <div class="bg-yellow-400 p-3 rounded-lg text-center text-blue-900">
+                <p class="font-bold text-sm">Drible</p>
+                <p class="text-2xl font-game">{{player2.dribbling}}</p>
+              </div>
+              <div class="bg-green-600 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Defesa</p>
+                <p class="text-2xl font-game">{{player2.defending}}</p>
+              </div>
+              <div class="bg-blue-900 p-3 rounded-lg text-center">
+                <p class="text-white text-sm">Físico</p>
+                <p class="text-2xl font-game">{{player2.physical}}</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-5 p-3 bg-white bg-opacity-10 rounded-lg">
+          <h3 class="text-2xl font-game text-white mb-3">ANÁLISE DE HABILIDADES</h3>
+          <div class="grid grid-cols-2 md:grid-cols-6 gap-3">
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Velocidade</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.pace < player2.pace, 
+                  'text-green-500': player1.pace > player2.pace, 
+                  'text-yellow-400': player1.pace === player2.pace
+                }" class="text-xl font-bold">
+                {{ player1.pace }} vs {{ player2.pace }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.pace > player2.pace ? player1.name + ' é mais rápido' : 
+                   player2.pace > player1.pace ? player2.name + ' é mais rápido' : 
+                   'Velocidade igual' }}
+              </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Chute</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.shooting < player2.shooting, 
+                  'text-green-500': player1.shooting > player2.shooting, 
+                  'text-yellow-400': player1.shooting === player2.shooting
+                }" class="text-xl font-bold">
+                {{ player1.shooting }} vs {{ player2.shooting }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.shooting > player2.shooting ? player1.name + ' tem melhor chute' : 
+                   player2.shooting > player1.shooting ? player2.name + ' tem melhor chute' : 
+                   'Chute igual' }}
+              </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Passe</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.passing < player2.passing, 
+                  'text-green-500': player1.passing > player2.passing, 
+                  'text-yellow-400': player1.passing === player2.passing
+                }" class="text-xl font-bold">
+                {{ player1.passing }} vs {{ player2.passing }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.passing > player2.passing ? player1.name + ' tem melhor passe' : 
+                   player2.passing > player1.passing ? player2.name + ' tem melhor passe' : 
+                   'Passe igual' }}
+              </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Drible</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.dribbling < player2.dribbling, 
+                  'text-green-500': player1.dribbling > player2.dribbling, 
+                  'text-yellow-400': player1.dribbling === player2.dribbling
+                }" class="text-xl font-bold">
+                {{ player1.dribbling }} vs {{ player2.dribbling }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.dribbling > player2.dribbling ? player1.name + ' tem melhor drible' : 
+                   player2.dribbling > player1.dribbling ? player2.name + ' tem melhor drible' : 
+                   'Drible igual' }}
+              </div>
+            </div>
+            
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Defesa</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.defending < player2.defending, 
+                  'text-green-500': player1.defending > player2.defending, 
+                  'text-yellow-400': player1.defending === player2.defending
+                }" class="text-xl font-bold">
+                {{ player1.defending }} vs {{ player2.defending }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.defending > player2.defending ? player1.name + ' defende melhor' : 
+                   player2.defending > player1.defending ? player2.name + ' defende melhor' : 
+                   'Defesa igual' }}
+              </div>
+            </div>
+
+            <div class="bg-black bg-opacity-50 p-3 rounded-lg text-center">
+              <h4 class="text-white text-sm">Físico</h4>
+              <div *ngIf="player1 && player2" [ngClass]="{
+                  'text-red-500': player1.physical < player2.physical, 
+                  'text-green-500': player1.physical > player2.physical, 
+                  'text-yellow-400': player1.physical === player2.physical
+                }" class="text-xl font-bold">
+                {{ player1.physical }} vs {{ player2.physical }}
+              </div>
+              <div *ngIf="player1 && player2" class="text-white text-sm">
+                {{ player1.physical > player2.physical ? player1.name + ' é mais forte' : 
+                   player2.physical > player1.physical ? player2.name + ' é mais forte' : 
+                   'Físico igual' }}
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

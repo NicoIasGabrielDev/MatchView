@@ -1,1 +1,33 @@
-/* You can add global styles to this file, and also import other style files */
+/* Tailwind CSS */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Animate.css */
+@import 'animate.css';
+
+/* Fontes */
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+/* Estilos personalizados globais */
+.text-shadow {
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+.text-stroke {
+  -webkit-text-stroke: 1px black;
+}
+
+/* Animações personalizadas */
+@keyframes pulse-border {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(255, 223, 0, 0.5);
+  }
+  50% {
+    box-shadow: 0 0 0 10px rgba(255, 223, 0, 0);
+  }
+}
+
+.pulse-border {
+  animation: pulse-border 2s infinite;
+}

@@ -1,0 +1,260 @@
+export interface Player {
+    id: number;
+    name: string;
+    club: string;
+    teamLogo: string;
+    position: string;
+    pace: number;
+    shooting: number;
+    passing: number;
+    dribbling: number;
+    defending: number;
+    physical: number;
+    bodyPhotoUrl: string;
+    facePhotoUrl: string;
+    attributes: number[];
+}
+
+
+export const BRAZILIANPLAYERS: Player[] = [
+    {
+      id: 1,
+      name: "Pelé",
+      club: "Santos",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/commons/3/35/Santos_logo.svg",
+      position: "ST",
+      pace: 95,
+      shooting: 96,
+      passing: 90,
+      dribbling: 94,
+      defending: 60,
+      physical: 85,
+      facePhotoUrl: "https://static.wefut.com/assets/images/fut18/playeravatars/237067.png?242",
+      bodyPhotoUrl: "https://soccerhof.imgix.net/players/pele.png",
+      attributes: [95, 96, 90, 94, 60, 85]
+    },
+    {
+      id: 2,
+      name: "Neymar Jr.",
+      club: "Paris Saint-Germain",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/a/a7/Paris_Saint-Germain_F.C..svg",
+      position: "LW",
+      pace: 92,
+      shooting: 89,
+      passing: 87,
+      dribbling: 95,
+      defending: 40,
+      physical: 60,
+      facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa24/faces/190871.png",
+      bodyPhotoUrl: "https://www.fifarosters.com/assets/players/fifa23/dynamic/117631383.png",
+      attributes: [92, 89, 87, 95, 40, 60]
+    },
+    {
+      id: 3,
+      name: "Zico",
+      club: "Flamengo",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/2/2e/Flamengo_braz_logo.svg/1200px-Flamengo_braz_logo.svg.png",
+      position: "CAM",
+      pace: 85,
+      shooting: 93,
+      passing: 92,
+      dribbling: 90,
+      defending: 50,
+      physical: 75,
+      facePhotoUrl: "https://www.mediastorehouse.com.au/p/210/zico-brazil-1977-5793850.jpg.webp",
+      bodyPhotoUrl: "/zico.png",
+      attributes: [85, 93, 92, 90, 50, 75]
+    },
+    {
+      id: 4,
+      name: "Vinícius Jr.",
+      club: "Real Madrid",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      position: "LW",
+      pace: 96,
+      shooting: 85,
+      passing: 80,
+      dribbling: 94,
+      defending: 40,
+      physical: 70,
+      facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa25/faces/238794.png",
+      bodyPhotoUrl: "https://preview.redd.it/o29zz9aervtc1.png?auto=webp&s=c828683910b14857522767f23a216f2fa1143bcb",
+      attributes: [96, 85, 80, 94, 40, 70]
+    },
+    {
+      id: 5,
+      name: "Rivaldo",
+      club: "Barcelona",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      position: "CAM",
+      pace: 88,
+      shooting: 91,
+      passing: 85,
+      dribbling: 90,
+      defending: 45,
+      physical: 75,
+      facePhotoUrl: "https://www.thesportsdb.com/images/media/player/cutout/qk013q1661513337.png",
+      bodyPhotoUrl: "https://www.thesportsdb.com/images/media/player/render/ws5b7t1661513183.png",
+      attributes: [88, 91, 85, 90, 45, 75]
+    },    
+    {
+      id: 7,
+      name: "Ronaldinho Gaúcho",
+      club: "Barcelona",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      position: "CAM",
+      pace: 90,
+      shooting: 88,
+      passing: 91,
+      dribbling: 96,
+      defending: 40,
+      physical: 70,
+      facePhotoUrl: "https://static.wefut.com/assets/images/fut18/playeravatars/28130.png?242",
+      bodyPhotoUrl: "https://ronaldinhooficial.com/wp-content/uploads/2018/03/RonaldinhoPlayer-copy.png",
+      attributes: [90, 88, 91, 96, 40, 70]
+    },
+    {
+      id: 6,
+      name: "Ronaldo Nazário",
+      club: "Inter de Milão",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/commons/6/63/Inter_old_logo_%281999-2007%29.png",
+      position: "ST",
+      pace: 97,
+      shooting: 95,
+      passing: 80,
+      dribbling: 92,
+      defending: 35,
+      physical: 85,
+      facePhotoUrl: "https://static.wefut.com/assets/images/fut18/playeravatars/37576.png?242",
+      bodyPhotoUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f50a06a8-6555-4d39-a69d-54c3969d37c2/dgjjezp-a5fa01c5-5f20-4807-90ef-50ca3be62397.png/v1/fill/w_1280,h_1969/4145__ronaldo_nazario_by_coffepix_dgjjezp-fullview.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9MTk2OSIsInBhdGgiOiJcL2ZcL2Y1MGEwNmE4LTY1NTUtNGQzOS1hNjlkLTU0YzM5NjlkMzdjMlwvZGdqamV6cC1hNWZhMDFjNS01ZjIwLTQ4MDctOTBlZi01MGNhM2JlNjIzOTcucG5nIiwid2lkdGgiOiI8PTEyODAifV1dLCJhdWQiOlsidXJuOnNlcnZpY2U6aW1hZ2Uub3BlcmF0aW9ucyJdfQ.p_Goy8RjzFtzHtB0Zg5V_lAePBQM0LCMidVuUogDmng",
+      attributes: [97, 95, 80, 92, 35, 85]
+    },
+    {
+      id: 12,
+      name: "Juninho Pernambucano",
+      club: "Lyon",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/pt/6/6d/Olympique_lyonnais.png",
+      position: "CM",
+      pace: 78,
+      shooting: 88,
+      passing: 90,
+      dribbling: 80,
+      defending: 65,
+      physical: 70,
+      facePhotoUrl: "https://s3p.sofifa.net/4ed5943da5caf0c3cbf58e9b685a7324d0a2becd.png",
+      bodyPhotoUrl: "https://fotos.web.sapo.io/i/Pa118928a/21463692_lDtJO.png",
+      attributes: [78, 88, 90, 80, 65, 70]
+    },
+    {
+      id: 9,
+      name: "Roberto Carlos",
+      club: "Real Madrid",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      position: "LB",
+      pace: 92,
+      shooting: 85,
+      passing: 80,
+      dribbling: 83,
+      defending: 80,
+      physical: 90,
+      facePhotoUrl: "https://static.wefut.com/assets/images/fut18/playeravatars/238430.png?242",
+      bodyPhotoUrl: "https://8lete.s3.ap-south-1.amazonaws.com/image/59bf1283-8597-4141-8b5c-34119c26d696-website%20image.png",
+      attributes: [92, 85, 80, 83, 80, 90]
+    },
+    {
+      id: 10,
+      name: "Sócrates",
+      club: "Corinthians",
+      teamLogo: "https://a.espncdn.com/combiner/i?img=/i/teamlogos/soccer/500/874.png",
+      position: "CAM",
+      pace: 75,
+      shooting: 80,
+      passing: 90,
+      dribbling: 85,
+      defending: 70,
+      physical: 78,
+      facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa25/faces/190046.png",
+      bodyPhotoUrl: "/socrates.png",
+      attributes: [75, 80, 90, 85, 70, 78]
+    },
+    {
+      id: 15,
+      name: "Garrincha",
+      club: "Botafogo",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/800px-Botafogo_de_Futebol_e_Regatas_logo.svg.png",
+      position: "RW",
+      pace: 93,
+      shooting: 82,
+      passing: 80,
+      dribbling: 97,
+      defending: 40,
+      physical: 70,
+      facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa24/faces/247553.png",
+      bodyPhotoUrl: "garrincha.png",
+      attributes: [93, 82, 80, 97, 40, 70]
+    },
+    {
+      id: 17,
+      name: "Romário",
+      club: "Barcelona",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      position: "ST",
+      pace: 90,
+      shooting: 94,
+      passing: 78,
+      dribbling: 88,
+      defending: 30,
+      physical: 70,
+      facePhotoUrl: "https://api.efootballdb.com/assets/2022/players/88033407929807_.png.webp",
+      bodyPhotoUrl: "/romario.png",
+      attributes: [90, 94, 78, 88, 30, 70]
+    },
+    {
+      id: 19,
+      name: "Raphinha",
+      club: "FC Barcelona",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/4/47/FC_Barcelona_%28crest%29.svg",
+      position: "RW",
+      pace: 89,
+      shooting: 84,
+      passing: 82,
+      dribbling: 88,
+      defending: 45,
+      physical: 70,
+      facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa25/faces/233419.png",
+      bodyPhotoUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e10449ee-7770-4f46-ac9f-dcae890ef6ea/djmiu12-282ff94b-5d39-43f7-a8b2-4b272d380a8a.jpg/v1/fit/w_500,h_667,q_70,strp/raphinha_fc_barcelona_la_liga_brazil_brazilian_foo_by_uniqrenders_djmiu12-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY3IiwicGF0aCI6IlwvZlwvZTEwNDQ5ZWUtNzc3MC00ZjQ2LWFjOWYtZGNhZTg5MGVmNmVhXC9kam1pdTEyLTI4MmZmOTRiLTVkMzktNDNmNy1hOGIyLTRiMjcyZDM4MGE4YS5qcGciLCJ3aWR0aCI6Ijw9NTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.auzu7r4LFeTdpKEy87gwFUu7UWODnSohMS9-o467HW8",
+      attributes: [89, 84, 82, 88, 45, 70]
+    },
+    {
+      id: 20,
+      name: "Rodrygo",
+      club: "Real Madrid",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/en/5/56/Real_Madrid_CF.svg",
+      position: "RW",
+      pace: 90,
+      shooting: 83,
+      passing: 80,
+      dribbling: 87,
+      defending: 40,
+      physical: 68,
+      facePhotoUrl: "https://static.wefut.com/assets/images/fut25/playeravatars/243812.png?242",
+      bodyPhotoUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/f50a06a8-6555-4d39-a69d-54c3969d37c2/di4u28b-398a7829-23c1-4182-854d-a208376971a6.png?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Y1MGEwNmE4LTY1NTUtNGQzOS1hNjlkLTU0YzM5NjlkMzdjMlwvZGk0dTI4Yi0zOThhNzgyOS0yM2MxLTQxODItODU0ZC1hMjA4Mzc2OTcxYTYucG5nIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.tRtiJymKCeDmfE-R-W24H8NFECFk93MWqvekPdJzp7Y",
+      attributes: [90, 83, 80, 87, 40, 68]
+    },
+    {
+      id: 21,
+      name: "Jairzinho",
+      club: "Botafogo",
+      teamLogo: "https://upload.wikimedia.org/wikipedia/commons/thumb/5/52/Botafogo_de_Futebol_e_Regatas_logo.svg/800px-Botafogo_de_Futebol_e_Regatas_logo.svg.png",
+      position: "RW",
+      pace: 91,
+      shooting: 89,
+      passing: 80,
+      dribbling: 88,
+      defending: 45,
+      physical: 86,
+      facePhotoUrl: "https://www.zerozero.pt/img/jogadores/48/5748_20210506165011_jairzinho.png",
+      bodyPhotoUrl: "/jairzinho.png",
+      attributes: [91, 89, 80, 88, 45, 86]
+    }        
+  ];

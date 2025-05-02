@@ -1,0 +1,45 @@
+<div *ngIf="player" class="player-card rounded-lg overflow-hidden shadow-xl bg-gradient-to-b from-gray-900 to-brazil-blue">
+    <div class="flex items-center justify-between p-4 bg-brazil-green">
+      <div class="flex items-center" [ngClass]="{'order-1': !isLeft, 'order-0': isLeft}">
+        <img [src]="player?.teamLogo" class="h-10 w-10" alt="Team logo">
+        <span class="ml-2 text-white font-bold">{{player?.club}}</span>
+      </div>
+      <div class="bg-brazil-blue text-white px-3 py-1 rounded-lg font-bold">
+        {{player?.position}}
+      </div>
+    </div>
+    
+    <div class="relative">
+      <img [src]="player?.bodyPhotoUrl" class="w-full h-64 object-cover" alt="Player photo">
+      <div class="absolute bottom-0 left-0 right-0 bg-gradient-to-t from-black to-transparent p-4">
+        <h2 class="text-3xl font-game text-white">{{player?.name}}</h2>
+      </div>
+    </div>
+    
+    <div class="p-4 grid grid-cols-3 gap-2">
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.pace)">
+        <p class="text-white font-bold">VEL</p>
+        <p class="text-2xl text-white">{{player?.pace}}</p>
+      </div>
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.shooting)">
+        <p class="text-white font-bold">CHU</p>
+        <p class="text-2xl text-white">{{player?.shooting}}</p>
+      </div>
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.passing)">
+        <p class="text-white font-bold">PAS</p>
+        <p class="text-2xl text-white">{{player?.passing}}</p>
+      </div>
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.dribbling)">
+        <p class="text-white font-bold">DRI</p>
+        <p class="text-2xl text-white">{{player?.dribbling}}</p>
+      </div>
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.defending)">
+        <p class="text-white font-bold">DEF</p>
+        <p class="text-2xl text-white">{{player?.defending}}</p>
+      </div>
+      <div class="stat-box text-center p-2 rounded" [ngClass]="getRatingClass(player.physical)">
+        <p class="text-white font-bold">FIS</p>
+        <p class="text-2xl text-white">{{player?.physical}}</p>
+      </div>
+    </div>
+  </div>
