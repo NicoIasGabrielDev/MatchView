@@ -23,7 +23,7 @@ export class PlayerComparisonComponent implements OnInit {
   ) { }
   
   ngOnInit(): void {
-    this.playerService.selectedPlayer1$.subscribe(player => {
+    this.playerService.selectedPlayer1$.subscribe((player) => {
       this.player1 = player;
       if (!player) this.checkSelection();
     });

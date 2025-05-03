@@ -46,7 +46,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 40,
       physical: 60,
       facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa24/faces/190871.png",
-      bodyPhotoUrl: "https://www.fifarosters.com/assets/players/fifa23/dynamic/117631383.png",
+      bodyPhotoUrl: "https://api.efootballdb.com/assets/2022/players/89071179308448_l.png.webp",
       attributes: [92, 89, 87, 95, 40, 60]
     },
     {
@@ -62,7 +62,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 50,
       physical: 75,
       facePhotoUrl: "https://www.mediastorehouse.com.au/p/210/zico-brazil-1977-5793850.jpg.webp",
-      bodyPhotoUrl: "/zico.png",
+      bodyPhotoUrl: "assets/images/zico.png",
       attributes: [85, 93, 92, 90, 50, 75]
     },
     {
@@ -174,7 +174,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 70,
       physical: 78,
       facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa25/faces/190046.png",
-      bodyPhotoUrl: "/socrates.png",
+      bodyPhotoUrl: "assets/images/socrates.png",
       attributes: [75, 80, 90, 85, 70, 78]
     },
     {
@@ -190,7 +190,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 40,
       physical: 70,
       facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa24/faces/247553.png",
-      bodyPhotoUrl: "garrincha.png",
+      bodyPhotoUrl: "assets/images/garrincha.png",
       attributes: [93, 82, 80, 97, 40, 70]
     },
     {
@@ -206,7 +206,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 30,
       physical: 70,
       facePhotoUrl: "https://api.efootballdb.com/assets/2022/players/88033407929807_.png.webp",
-      bodyPhotoUrl: "/romario.png",
+      bodyPhotoUrl: "assets/images/romario.png",
       attributes: [90, 94, 78, 88, 30, 70]
     },
     {
@@ -222,7 +222,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 45,
       physical: 70,
       facePhotoUrl: "https://www.fifarosters.com/assets/players/fifa25/faces/233419.png",
-      bodyPhotoUrl: "https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/e10449ee-7770-4f46-ac9f-dcae890ef6ea/djmiu12-282ff94b-5d39-43f7-a8b2-4b272d380a8a.jpg/v1/fit/w_500,h_667,q_70,strp/raphinha_fc_barcelona_la_liga_brazil_brazilian_foo_by_uniqrenders_djmiu12-375w-2x.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NjY3IiwicGF0aCI6IlwvZlwvZTEwNDQ5ZWUtNzc3MC00ZjQ2LWFjOWYtZGNhZTg5MGVmNmVhXC9kam1pdTEyLTI4MmZmOTRiLTVkMzktNDNmNy1hOGIyLTRiMjcyZDM4MGE4YS5qcGciLCJ3aWR0aCI6Ijw9NTAwIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmltYWdlLm9wZXJhdGlvbnMiXX0.auzu7r4LFeTdpKEy87gwFUu7UWODnSohMS9-o467HW8",
+      bodyPhotoUrl: "https://sportrenders.com/wp-content/uploads/2024/08/Raphinha-PNG-Barcelona-Football-Render-1.png",
       attributes: [89, 84, 82, 88, 45, 70]
     },
     {
@@ -254,7 +254,7 @@ export const BRAZILIANPLAYERS: Player[] = [
       defending: 45,
       physical: 86,
       facePhotoUrl: "https://www.zerozero.pt/img/jogadores/48/5748_20210506165011_jairzinho.png",
-      bodyPhotoUrl: "/jairzinho.png",
+      bodyPhotoUrl: "assets/images/jairzinho.png",
       attributes: [91, 89, 80, 88, 45, 86]
     }        
   ];
